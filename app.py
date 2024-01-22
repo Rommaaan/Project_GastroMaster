@@ -34,11 +34,6 @@ def workers():
         tableData=tableData)
 
 
-@app.route('/menu')
-def menu():
-    return render_template("menu.html")
-
-
 @app.route('/management_analysis')
 def management_analysis():
     return render_template("management_analysis.html")
@@ -47,6 +42,21 @@ def management_analysis():
 @app.route('/user/<string:name>/<int:id>')
 def user(name, id):
     return "User page: " + name + " - " + str(id)
+
+
+@app.route('/post_1')
+def post_1():
+    return render_template("post_1.html")
+
+
+@app.route('/post_2')
+def post_2():
+    return render_template("post_2.html")
+
+
+@app.route('/post_3')
+def post_3():
+    return render_template("post_3.html")
 
 
 if __name__ == "__main__":
